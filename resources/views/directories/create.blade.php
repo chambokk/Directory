@@ -29,7 +29,7 @@
                 
                 <div class="col-md-4 p-1">
                     <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add </button>
-                </div>
+                </div>jj
                 
                 <div class="col-md-4 p-1">
                     <a href="/" class="btn btn-block btn-secondary"> Back</a>
