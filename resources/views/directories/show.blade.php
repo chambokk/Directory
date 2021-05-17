@@ -7,9 +7,9 @@
 <div class="row-py-5">
    
 
-    <div class="col-md-2 p-2">
+    {{-- <div class="col-md-2 p-2">
         <a href="create" class="btn btn-block btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Add Directory</a>
-    </div>
+    </div> --}}
 
     
     <table class="table table-sm table-dark bg-secondary table-dark">

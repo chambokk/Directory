@@ -25,7 +25,7 @@
         <h2 class="text-warning text-center">Provincial Capitol of Davao de Oro Directory</h2> 
         
         <div class="row d-flex center-content-center"> 
-            <table class="table table-sm table-bordered bg-info table-primary" style="width: 80%">
+            <table class="table table-sm table-bordered bg-info table-primary"  >
                 <thead> 
                     <tr class="text-left">
                         <th>Office</th>
@@ -46,8 +46,12 @@
                      
                 </tbody>
             </table>
-            {{$directories->links()}}
         </div>
+            <div class="col-md-1">
+                {{$directories->links()}}
+
+                <a href="/" class="btn btn-block btn-primary"> Back</a>
+            </div>
     </main>
    
 

@@ -13,7 +13,7 @@
        </div>
         
         
-        <div class="col-md-12 d-flex justify-content-center">
+        <div class="col-md-12  justify-content-center">
             <form action="/show" method="POST">
                 @csrf
                 <div class="row d-flex center-content-center">
@@ -33,8 +33,8 @@
                         <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Search </button>
                     </div>
                    
-                    <div class="col-md-4 p-2">
-                        <a href="print" class="btn btn-block btn-info"> <i class="fa fa-print"></i> Print Directory</a>
+                    <div class="col-md-3 ">
+                        <a href="print" class="btn btn-block btn-info"><i class="fa fa-print"></i> Print Directory</a>
                     </div>
                 </div>
             
