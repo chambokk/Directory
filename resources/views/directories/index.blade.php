@@ -33,19 +33,15 @@
                         <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-search" aria-hidden="true"></i> Search </button>
                     </div>
                    
-                    <div class="col-md-3 ">
-                        <a href="print" class="btn btn-block btn-info" target="_blank" > <i class="fa fa-print"></i> Print Directory</a>
-                    </div>
-
-                    <div class="col-md-12 p-2">
-                        <a href="create" class="btn btn-block btn-success" target="_blank"> Add Directory</a>
+                    <div class="col-md-4 p-2">
+                        <a href="print" class="btn btn-block btn-info"> <i class="fa fa-print"></i> Print Directory</a>
                     </div>
                 </div>
             
             </form>
         </div>
    </div>
-<br>
+
 @endsection
 
 @section('scripts')

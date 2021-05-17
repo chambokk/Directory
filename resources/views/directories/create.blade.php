@@ -5,10 +5,10 @@
     <h2 class="">Add Directories</h2> 
     
     
-    @csrf
-     <div class="col-md-12 d-flex justify-content-center ">
-    <form action="{{ route('store') }}" method="POST">
-       
+    <div class="col-md-12 d-flex justify-content-center ">
+        <form action="{{ route('store') }}" method="POST">
+            
+            @csrf
        
         <div class="col md-12 form-group"> 
             <label class="font-weight-bold"> Office Name </label>

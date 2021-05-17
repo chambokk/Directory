@@ -31,7 +31,7 @@
                         <th>Office</th>
                         <th>Directories</th>
                         <th>Contact Name</th>
-                        <th>Type</th>
+                        <th>Other Name</th>
                     </tr>
                 </thead>
                 <tbody>
