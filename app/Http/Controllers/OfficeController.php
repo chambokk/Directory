@@ -28,7 +28,7 @@ class OfficeController extends Controller
                             ->select('directories.*', 'offices.office')
                             ->join('offices','directories.office_id','offices.id')
                             ->orderby('offices.office', 'asc')
-                            ->paginate(25);
+                            ->get();
         // dd($directories);
         return view('directories.print', compact('directories'));
     }
@@ -37,7 +37,7 @@ class OfficeController extends Controller
        $office = Office::orderBy('office', 'asc')->get();
        return view('directories.create', compact('office'));
    }
-
+   
    public function store(Request $request)
     {
         $office = Directory::create($request->all());

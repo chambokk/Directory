@@ -13,7 +13,7 @@
 
     @yield('styles')
     </head>
-    <body style="background-color:#eca63d">
+    <body style="background-color:#cfb077">
     <main class="container py-5">
         @yield('content')
     </main>
