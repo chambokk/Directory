@@ -21,9 +21,11 @@ class OfficeController extends Controller
     public function list($id)
     {
         // $directory = Directory::with('office')->get();
-        $offices = Office::where('category_id', $id)->get(); 
+        $offices = Office::where('category_id', $id)->orderby('office','asc')->get(); 
         return view('directories.index', compact('offices'));
     }
+
+   
     public function show(Request $request)
     {
         $directories = Directory::where('office_id', $request->office)->get();
@@ -49,7 +51,7 @@ class OfficeController extends Controller
    public function store(Request $request)
     {
         $office = Directory::create($request->all());
-        return redirect('/')->with('success', 'Successfully add');
+        return redirect('/')->with('success','Successfully add');
   
     }
 }

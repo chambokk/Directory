@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('styles')
+    <link rel="stylesheet" href="{{ asset('css/select2.min.css')}}">
     <style>
         .floating-button {
             
@@ -28,7 +29,7 @@
             <h1 class="text-warning">Provincial Capitol of Davao de Oro Directory</h1> 
         </div>
         <div class=" ">
-            <form action="provincial/show" method="POST">
+            <form action="/show" method="POST">
                 @csrf
                 <div class="row">
 
@@ -61,4 +62,14 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script src="{{ asset('js/select2.min.js') }}"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#office').select2();
+    })
+</script>
 @endsection

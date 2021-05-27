@@ -2,8 +2,12 @@
 
 @section('content')
 <div class="row py-4">
-     <div class="card w-100">
+     <div class="card text-dark bg-warning w-100 border-dark mb-100"  style="max-width: 100rem;" >
     <h2 class="card-title">Add Directories</h2> 
+
+    {{-- <div class="col-md-4 p-1">
+        <a href="/" class="btn btn-block btn-secondary"> Add</a>
+    </div> --}}
     
     <div class="col-md-12 d-flex justify-content-center ">
     <form action="{{ route('store') }}" method="POST">
