@@ -11,6 +11,6 @@ class WelcomeController extends Controller
 
         $directory = Directory::with('office')->get();
         return view('Welcome', compact('directory'));
-
+        
     }
 }

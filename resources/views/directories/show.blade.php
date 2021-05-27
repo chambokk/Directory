@@ -40,7 +40,7 @@
     </table>
 
         <div class="col-md-1 p-1">
-       <a href="/" class="btn btn-block btn-primary"> Back</a>
+       <a href="#" class="btn btn-block btn-primary" onclick="goBack()"> Back</a>
         </div>
 </div>
     {{-- </div>

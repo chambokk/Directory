@@ -41,13 +41,13 @@
     <main class="container ">
         <h2 class="text-warning text-center">Provincial Capitol of Davao de Oro Directory</h2> 
         
-        <div class="row d-flex center-content-center printme ex3"> 
+        <div class="row d-flex left-content-jleft printme ex3"> 
             <table class="table table-sm table-bordered bg-info table-primary"  >
                 <thead> 
                     <tr class="text-left">
                         <th>Office</th>
                         <th>Name</th>
-                        <th>Directories</th>
+                        <th>Intercom</th>
                         <th>Landline</th>
                         <th>Email</th>
 
@@ -55,10 +55,10 @@
                 </thead>
                 <tbody>
                    @foreach ($directories as $directory)
-                       <tr class="text-justify">
+                       <tr class="text-left">
                            <td>{{$directory->office}}</td>
-                           <td>{{$directory->directory_no}}</td>
                            <td>{{$directory->contact_name}}</td>
+                           <td>{{$directory->directory_no}}</td>
                            <td>{{$directory->type}}</td>
                            <td>{{$directory->email}}</td>
                            

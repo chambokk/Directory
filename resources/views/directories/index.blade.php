@@ -24,10 +24,11 @@
 <div class="">
     <div class="col-md-12">
         <div class="row d-flex justify-content-center ">
+
             <h1 class="text-warning">Provincial Capitol of Davao de Oro Directory</h1> 
         </div>
         <div class=" ">
-            <form action="/show" method="POST">
+            <form action="provincial/show" method="POST">
                 @csrf
                 <div class="row">
 

@@ -14,7 +14,8 @@
     @yield('styles')
     </head>
     <body style="background-color:#6e4904">
-    <main class="container py-5">
+       <div class=''> @include('pages.nav')</div>
+        <main class="container py-5">
         @yield('content')
     </main>
     <script src="{{ asset('js/app.js') }}"></script>
@@ -22,5 +23,10 @@
     
     @yield('scripts')
 
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
     </body>
 </html>

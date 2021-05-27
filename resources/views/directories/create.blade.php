@@ -33,8 +33,8 @@
                 <input type="text" name="contact_no" class="form-control" placeholder="contact">  
 
                 <label class="font-weight-bold"> Email </label>
+                
                 <input type="text" name="email" class="form-control" placeholder="email">  
-               
                
                 <div class="col-md-4 p-1">
                     <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add </button>

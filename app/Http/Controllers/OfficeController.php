@@ -13,8 +13,16 @@ class OfficeController extends Controller
     {
         $directory = Directory::with('office')->get();
         $offices = Office::all(); 
-        return view('directories.index', compact('directory', 'offices'));
+        return view('pages.welcome');
 
+    }
+
+    // get all filtered directories
+    public function list($id)
+    {
+        // $directory = Directory::with('office')->get();
+        $offices = Office::where('category_id', $id)->get(); 
+        return view('directories.index', compact('offices'));
     }
     public function show(Request $request)
     {

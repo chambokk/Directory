@@ -14,7 +14,10 @@
 /*Route::get('/', function () {
     return view('welcome');
 });*/
+
 Route::get('/print', 'OfficeController@print');
 Route::post('/show', 'OfficeController@show');
 
+Route::get('directories/{id}', 'OfficeController@list');
+Route::post('/provincial/show', 'ProvicialController@show');
 Route::resource('/','OfficeController');
