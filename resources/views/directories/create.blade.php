@@ -40,12 +40,12 @@
                 
                 <input type="text" name="email" class="form-control" placeholder="email">  
                
-                <div class="col-md-4 p-1">
+                <div class="col-md-3 p-1">
                     <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add </button>
                 </div>
                 
-                <div class="col-md-4 p-1">
-                    <a href="/" class="btn btn-block btn-secondary"></a><i class="fas fa-angle-double-left" aria-hidden="true"></i>Back</a>
+                <div class="col-md-3 p-1">
+                    <a href="/" class="btn btn-block btn-secondary"><i class="far fa-backward"></i>Back</a>
                 </div>
             
             </div>
