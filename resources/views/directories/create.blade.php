@@ -45,7 +45,7 @@
                 </div>
                 
                 <div class="col-md-4 p-1">
-                    <a href="/" class="btn btn-block btn-secondary"> Back</a>
+                    <a href="/" class="btn btn-block btn-secondary"></a><i class="fas fa-angle-double-left" aria-hidden="true"></i>Back</a>
                 </div>
             
             </div>
