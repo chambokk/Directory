@@ -37,7 +37,7 @@
                         <div class="row  d-flex justify-content-center ">
                             <div class="col-md-6 col-12 mb-2">
                                 <select name="office" class="form-control" id="office">
-                                    <option value=""> Select Office</option>
+                                    <option value="" style=""> Select Office</option>
                                     @foreach ($offices as $itcdd)
                                         <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>
                                      
@@ -52,7 +52,7 @@
                             </div>
                             
                             <div class="col-md-1 col-4 px-1">
-                                <a href="print" class="btn btn-block btn-success floating-button"><i class="fa fa-print"></i> </a>
+                                <a href="/print" class="btn btn-block btn-success floating-button"><i class="fa fa-print"></i> </a>
                             </div>
                         </div>
 

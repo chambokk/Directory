@@ -48,8 +48,8 @@
                         <th>Office</th>
                         <th>Name</th>
                         <th>Intercom</th>
-                        <th>Landline</th>
                         <th>Email</th>
+                        {{-- <th>Email</th> --}}
 
                     </tr>
                 </thead>
@@ -60,7 +60,7 @@
                            <td>{{$directory->contact_name}}</td>
                            <td>{{$directory->directory_no}}</td>
                            <td>{{$directory->type}}</td>
-                           <td>{{$directory->email}}</td>
+                           {{-- <td>{{$directory->email}}</td> --}}
                            
                        </tr>
                    @endforeach
@@ -70,29 +70,35 @@
         </div>
             <div class="col-md-1 no-printme">
 
-                <a href="/" class="btn btn-block btn-primary"> Back</a>
+                <a href="#" onclick="goBack()" class="btn btn-block btn-primary"> Back</a>
             </div>
     </main>
    
     <script language="javascript" type="text/javascript">
-    function PrintElem(elem)
-    {
-        var mywindow = window.open('', 'PRINT', 'height=400,width=600');
 
-        mywindow.document.write('<html><head><title>' + document.title  + '</title>');
-        mywindow.document.write('</head><body >');
-        mywindow.document.write('<h1>' + document.title  + '</h1>');
-        mywindow.document.write(document.getElementById(elem).innerHTML);
-        mywindow.document.write('</body></html>');
+        function PrintElem(elem)
+        {
+            var mywindow = window.open('', 'PRINT', 'height=400,width=600');
 
-        mywindow.document.close(); // necessary for IE >= 10
-        mywindow.focus(); // necessary for IE >= 10*/
+            mywindow.document.write('<html><head><title>' + document.title  + '</title>');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write('<h1>' + document.title  + '</h1>');
+            mywindow.document.write(document.getElementById(elem).innerHTML);
+            mywindow.document.write('</body></html>');
 
-        mywindow.print();
-        mywindow.close();
+            mywindow.document.close(); // necessary for IE >= 10
+            mywindow.focus(); // necessary for IE >= 10*/
 
-        return true;
-    }
+            mywindow.print();
+            mywindow.close();
+
+            return true;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
     </script>
     </body>
 </html>
