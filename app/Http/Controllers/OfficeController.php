@@ -52,6 +52,17 @@ class OfficeController extends Controller
     {
         $office = Directory::create($request->all());
         return redirect('/')->with('success','Successfully add');
-  
     }
+
+    public function add()
+    {
+        $offices = Office::orderBy('office', 'asc')->get();
+        return view('add',compact('offices'));
+    }
+    public function add1(Request $request)
+    {
+        $office = Office::create($request->all());
+        return redirect('create')->with('success','Successfully add');
+    }
+   
 }

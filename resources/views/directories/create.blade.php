@@ -16,6 +16,8 @@
             
             <div class="col md-4 form-group"> 
                <div class="card-body">
+
+               
                 <label class="font-weight-bold"> Office Name </label>
                 <select class="form-control" name="office_id">
                     <option disabled selected="true">choose office</option>
@@ -24,6 +26,7 @@
                     @endforeach
                 </select>
 
+                
                 <label class="font-weight-bold"> Contact Name </label>           
                 <input type="text" name="contact_name" class="form-control" placeholder="name">   
                 
@@ -48,7 +51,7 @@
                     <a href="/" class="btn btn-block btn-secondary" style="color: chocos">Back</a>
                    
                 </div>
-            
+
             </div>
     
 </div>

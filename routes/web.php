@@ -22,3 +22,5 @@ Route::get('directories/{id}', 'OfficeController@list');
 Route::post('directories/show', 'OfficeController@show');
 Route::post('/provincial/show', 'ProvicialController@show');
 Route::resource('/','OfficeController');
+Route::get('/add', 'OfficeController@add');
+Route::post('/add1', 'OfficeController@add1')->name('add1');

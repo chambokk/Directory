@@ -19,7 +19,7 @@
             <tr class="text-justify p-2"> 
                 <th>Name</th>
                 <th>Intercom Number</th>
-                <th>Landline</th>
+                <th>Other Number</th>
                 <th>Mobile Number</th>
                 <th>Email</th>
             </tr>
