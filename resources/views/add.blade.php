@@ -4,8 +4,7 @@
 
 <div class="row py-4">
 <div class="col-md-12 d-flex justify-content-center ">
-    <form action="{{ route('add1') }}" method="POST">
-            
+    <form action="{{ route('add1') }}" method="POST">           
 @csrf
 
 <div class="card">
@@ -20,7 +19,7 @@
         
         <select class="form-control" name="category_id">
             <option disabled selected="true">choose category</option>
-            <option value="1" >Provincial</option>
+            <option value="1">Provincial</option>
             <option value="2">Municipal</option>
             <option value="3">National Agency</option>
         </select>

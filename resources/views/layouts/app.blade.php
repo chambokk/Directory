@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <link href="{{asset('css/all.min.css')}}" rel="stylesheet">
-
+        
     @yield('styles')
     </head>
     <body style="background-color:#6e4904">

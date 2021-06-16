@@ -39,9 +39,7 @@
                                 <select name="office" class="form-control" id="office">
                                     <option value="" style=""> Select Office</option>
                                     @foreach ($offices as $itcdd)
-                                        <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>
-                                     
-                                        
+                                        <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
                                     @endforeach 
                                     
                                 </select>
