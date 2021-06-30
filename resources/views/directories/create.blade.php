@@ -1,9 +1,16 @@
-@extends('layouts.app1')
+@extends('layouts.app2')
 
 @section('content')
+
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+</div>
+
+
 <div class="row py-4">
      <div class="card text-dark bg-warning w-100 border-dark mb-100"  style="max-width: 100rem;" >
-    <h2 class="card-title">Add Directories</h2> 
+    <div><h2 class="card-header">Add Directories</h2>
+    </div>                
 
     {{-- <div class="col-md-4 p-1">
         <a href="/" class="btn btn-block btn-secondary"> Add</a>
@@ -20,7 +27,8 @@
                
                 <label class="font-weight-bold"> Office Name </label>
                 <select class="form-control" name="office_id">
-                    <option disabled selected="true">choose office</option>
+                    {{-- <option disabled selected="true">choose office</option> --}}
+                    <option value="" style=""> Select Office</option>
                     @foreach($office as $offices)
                     <option value="{{ $offices->id }}">{{ $offices->office }}</option>
                     @endforeach
@@ -45,11 +53,11 @@
                
                 <div class="col-md-3 p-1">
                     <button type="submit" class="btn btn-block btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Add </button>
+                    <a href="/" class="btn btn-block btn-secondary" style="color: chocos">Back</a>
                 </div>
                 
                 <div class="col-md-3 p-1">
-                    <a href="/" class="btn btn-block btn-secondary" style="color: chocos">Back</a>
-                   
+                    
                 </div>
 
             </div>

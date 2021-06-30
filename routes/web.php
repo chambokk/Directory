@@ -24,3 +24,19 @@ Route::post('/provincial/show', 'ProvicialController@show');
 Route::resource('/','OfficeController');
 Route::get('/add', 'OfficeController@add');
 Route::post('/add1', 'OfficeController@add1')->name('add1');
+
+Route::get('directories/create', 'OfficeController@create');
+
+// route to addoffice
+Route::resource('addoffice', 'AddofficeController');
+Route::post('addoffice/delete_office', 'AddofficeController@delete_office')->name('delete_office');
+
+// route for create new directory
+Route::resource('create', 'DirectoryController');
+Route::post('create/edit_directory', 'DirectoryController@edit_directory');
+Route::post('create/delete_directory', 'DirectoryController@delete_directory')->name('delete_directory');
+Route::post('create/update_directory', 'DirectoryController@update_directory')->name('update_directory');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -10,17 +10,22 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <link href="{{asset('css/all.min.css')}}" rel="stylesheet">
-
+        
     @yield('styles')
     </head>
-    <body style="background-color:#ac740d">
-    <main class="container py-5">
+    <body style="background-color:#6e4904">
+       <div class=''> @include('pages.nav2')</div>
+        <main class="container py-5">
         @yield('content')
     </main>
     <script src="{{ asset('js/app.js') }}"></script>
-    
-    
-    @yield('scripts')
-
+    <script src="{{ asset('js/notify.min.js') }}"></script>
+    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ asset('js/swal.min.js') }}"></script>
+     @yield('scripts')
     </body>
+
+</div>
+
+
 </html>

@@ -11,19 +11,17 @@
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="/"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color: rgb(27, 55, 82);font-size:18px">
-                   Category
-                    </a>
+               
+                {{-- <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="{{ url('/create') }}">Create</a>
+                </li> --}}
 
-
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="{{ url('/directories/1') }}">Provincial  Offices</a>
-                        <a class="dropdown-item" href="{{ url('/directories/2') }}">Municipal Offices</a>
-                        <a class="dropdown-item" href="{{ url('/directories/3') }}">National Offices</a>
-                    </div>
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="{{ url('create') }}">Create</a>
                 </li>
-                
+                <li class="nav-item active">
+                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="{{ url('addoffice') }}">Office</a>
+                </li>
             </ul>
         </div>
 
