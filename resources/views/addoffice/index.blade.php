@@ -27,9 +27,9 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-               
+               @forelse ($office as $offices)
                 <tbody>
-                    @forelse ($office as $offices)
+                    
                     <tr>
                         <td>{{$offices->office}}</td> 
                         <td>{{$offices->category_id}}</td> 
@@ -40,10 +40,11 @@
                     <td colspan="3">
                         no record found
                     </td>
-                    @endforelse
 
                 </tbody>
+                 @endforelse
             </table>
+           
         </div>
     </div>
 </div>

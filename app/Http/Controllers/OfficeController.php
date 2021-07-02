@@ -13,7 +13,7 @@ class OfficeController extends Controller
     {
         $directory = Directory::with('office')->get();
         $offices = Office::all(); 
-        return view('pages.welcome');
+        return view('pages.welcome', compact('directory', 'offices'));
 
     }
 

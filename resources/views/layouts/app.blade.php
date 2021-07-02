@@ -18,6 +18,7 @@
         <main class="container py-5">
         @yield('content')
     </main>
+    
     <script src="{{ asset('js/app.js') }}"></script>
     
     
@@ -27,6 +28,8 @@
         function goBack() {
             window.history.back();
         }
+
+       
     </script>
     </body>
 </html>

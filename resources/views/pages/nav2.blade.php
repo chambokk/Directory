@@ -12,17 +12,19 @@
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="/"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
                 </li>
                
-                {{-- <li class="nav-item active">
+                <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="{{ url('/create') }}">Create</a>
                 </li> --}}
 
-                <li class="nav-item active">
+             <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="{{ url('create') }}">Create</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:18px"  href="{{ url('addoffice') }}">Office</a>
                 </li>
             </ul>
+
+            
         </div>
 
     </nav>

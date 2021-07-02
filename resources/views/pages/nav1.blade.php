@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light navbar-expand-lg" style="background-color: #f1cb4b;">
+{{-- <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #f1cb4b;">
 
     <img src="{{ asset('images/logo.png')}}" class="img-fluid" width="45">
        <a class="navbar-nav auto font-weight-bold pl-2" style="color: rgb(14, 35, 48); font-size:25px">Intercom</a>
@@ -19,4 +19,4 @@
             </ul>
         </div>
 
-    </nav>
+    </nav> --}}

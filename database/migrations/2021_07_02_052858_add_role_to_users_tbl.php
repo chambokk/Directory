@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddCategoryIdToOfficesTbl extends Migration
+class AddRoleToUsersTbl extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class AddCategoryIdToOfficesTbl extends Migration
      */
     public function up()
     {
-        Schema::table('offices', function (Blueprint $table) {
-            
-            $table->integer('category_id')->after('office');
+        Schema::table('users', function (Blueprint $table) {
+            $table->integer('role')->after('name');
         });
     }
 
@@ -26,8 +25,8 @@ class AddCategoryIdToOfficesTbl extends Migration
      */
     public function down()
     {
-        Schema::table('offices', function (Blueprint $table) {
-            $table->dropColumn('category_id');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('role');
         });
     }
 }

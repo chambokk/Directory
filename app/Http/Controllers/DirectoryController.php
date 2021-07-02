@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Directory;
 use App\Office;
+use App\User;
 
 class DirectoryController extends Controller
 {
@@ -41,9 +42,7 @@ class DirectoryController extends Controller
         $request->validate([
             'contact_name'  =>  'required',
             'directory_no'  =>  'required',
-            'contact_no'  =>  'required',
-            'type'  =>  'required',
-            'email'  =>  'required',
+            
         ]);
         $add = Directory::create($request->all());
         return $add;
@@ -119,5 +118,15 @@ class DirectoryController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function update_password(Request $request) 
+    {
+       
+        $user = User::findOrFail(auth()->user()->id);
+        $old = $request->password;
+        $request['password'] = bcrypt($request->password);
+        $user->update($request->all());
+        return "Password successfully changed!";
     }
 }
