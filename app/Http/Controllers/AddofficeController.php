@@ -15,7 +15,7 @@ class AddofficeController extends Controller
      */
     public function index()
     {
-        $office = Office::orderBy('category_id','asc')->get();
+        $office = Office::orderBy('category_id','asc')->paginate(12);
         return view('addoffice.index', compact('office'));
     }
 

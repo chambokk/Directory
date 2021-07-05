@@ -14,8 +14,7 @@
                         <div class="col-md-2 col-1">
                         <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
                         </div>
-                    <div>
-                </div>
+                    </div>
         </div>
 
         <div class="card">
@@ -44,7 +43,7 @@
                 </tbody>
                  @endforelse
             </table>
-           
+        {{$office->links()}} 
         </div>
     </div>
 </div>
