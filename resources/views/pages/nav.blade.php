@@ -16,19 +16,6 @@
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="/"><i class="fas fa-home"></i>Home <span class="sr-only">(current)</span></a>
                 </li>
                 @guest
-
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="{{url('/directories/1')}}"></i>Provincial<span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="{{url('/directories/2')}}"></i>National Agency<span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="{{url('/directories/3')}}"></i>Municipal<span class="sr-only">(current)</span></a>
-                </li>
-
                 
                 {{-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle font-weight-bold" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  style="color: rgb(27, 55, 82);font-size:15px">

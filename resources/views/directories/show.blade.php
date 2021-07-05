@@ -18,9 +18,9 @@
         <thead> 
             <tr class="text-justify p-2"> 
                 <th>Contact Name</th>
-                <th>Intercom No</th>
-                <th>Contact No</th>
-                <th>Other No</th>
+                <th>Intercom</th>
+                <th>Landline No</th>
+                <th>Cellphone No</th>
                 <th>Email</th>
             </tr>
         </thead>

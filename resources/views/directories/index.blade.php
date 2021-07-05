@@ -26,7 +26,7 @@
     <div class="col-md-12">
         <div class="row d-flex justify-content-center ">
 
-            <h1 class="text-warning">Online Viewing Directory</h1> 
+            <h1 class="text-warning">Davao de Oro Directory</h1> 
         </div>
         <div class=" ">
             <form action="/show" method="POST">

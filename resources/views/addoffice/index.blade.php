@@ -9,13 +9,30 @@
             <div class="card">
                 <div class="card-header">
                     <h2> Office</h2>
-
-                    <div class="row">
-                        <div class="col-md-2 col-1">
-                        <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
-                        </div>
+                    {{-- <div class="col-md-12">
+                        <div class="row  d-flex justify-content-center ">
+                            <div class="col-md-6 col-12 mb-2">
+                                <select name="office" class="form-control" id="office">
+                                    <option value="" style=""> Select Office</option>
+                                    @foreach ($office as $itcdd)
+                                        <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
+                                    @endforeach 
+                                    
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-1 col-4 px-1">
+                                <button type="submit" class="btn btn-block" style="background-color:#ffed4a"><i class="fa fa-search" aria-hidden="true"></i> </button>
+                            </div>
+                             --}}
+                       
+                    <div class="col-md-2 col-1">
+                    <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
                     </div>
+                     </div>
+            
         </div>
+        {{-- </div> --}}
 
         <div class="card">
             <table class="table table-striped">
