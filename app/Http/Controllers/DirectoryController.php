@@ -18,6 +18,7 @@ class DirectoryController extends Controller
     {
         $office = Office::all();
         $directory = Directory::with('office')->paginate(15);
+        // dd($directory);
         return view ('create.index', compact('office', 'directory'));
     }
 
@@ -55,13 +56,14 @@ class DirectoryController extends Controller
     
         public function update_directory(Request $request)
         {
+           
             $request->validate([
                 'office_id'  =>  'required',
                 'contact_name'  =>  'required',
                 'directory_no'  =>  'required',
-                ]);
+            ]);
 
-                $create = Directory::where ('id', $request->id)->first();
+                $create = Directory::findOrFail($request->id);
                 $create->update($request->all());
                 return $create;
 

@@ -44,8 +44,8 @@
                         <th>Office Name</th>
                         <th>Contact Name</th>
                         <th>Intercom No.</th>
-                        <th>Contact No.</th>
-                        <th>Other No.</th>
+                        <th>Cellphone No.</th>
+                        <th>Landline No.</th>
                         <th>Email</th>
                         <th>Action</th>
                     
@@ -111,7 +111,7 @@
                 <label class="font-weight-bold"> Intercom Number </label>
                 <input type="text" class="form-control directory_no" placeholder="no.">   
                 
-                <label class="font-weight-bold"> Other Number </label>
+                <label class="font-weight-bold"> Landline Number </label>
                 <input type="text" class="form-control type" placeholder="type">
 
                 <label class="font-weight-bold"> Contact Number </label>
@@ -158,7 +158,7 @@
             <label class="font-weight-bold"> Intercom Number </label>
             <input type="text" class="form-control directory_nos" placeholder="no.">   
             
-            <label class="font-weight-bold"> Other Number </label>
+            <label class="font-weight-bold"> Landline Number </label>
             <input type="text" class="form-control types" placeholder="type">
 
             <label class="font-weight-bold"> Contact Number </label>
