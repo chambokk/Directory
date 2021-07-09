@@ -29,7 +29,7 @@
             <h1 class="text-warning">Davao de Oro Directory</h1> 
         </div>
         <div class=" ">
-            <form action="/show" method="POST">
+            <form action="/show" method="POST" id="directory_form">
                 @csrf
                 <div class="row">
 
@@ -37,7 +37,7 @@
                         <div class="row  d-flex justify-content-center ">
                             <div class="col-md-6 col-12 mb-2">
                                 <select name="office" class="form-control" id="office">
-                                    <option value="" style=""> Select Office</option>
+                                    <option value="" style="">Select Office</option>
                                     @foreach ($offices as $itcdd)
                                         <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
                                     @endforeach 
@@ -46,9 +46,9 @@
                             </div>
 
                           
-                            <div class="col-md-1 col-4 px-1">
+                            {{-- <div class="col-md-1 col-4 px-1">
                                 <button type="submit" class="btn btn-block" style="background-color:#ffed4a"><i class="fa fa-search" aria-hidden="true"></i> </button>
-                            </div>
+                            </div> --}}
                             
                             <div class="col-md-1 col-4 px-1">
                                 <a href="/print" class="btn btn-block btn-success floating-button"><i class="fa fa-print"></i> </a>
@@ -68,7 +68,11 @@
 
 <script>
     $(document).ready(function () {
-        $('#office').select2();
+        $('#office').select2(); 
+
+        $(document).on('change', '#office', function(){
+            $('#directory_form').submit();
+        })
     })
 </script>
 @endsection

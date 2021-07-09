@@ -73,7 +73,7 @@
                        
                     </tbody>
                 @endforelse
-    
+                    
                    
             </table>
              {{$directory->links()}}
