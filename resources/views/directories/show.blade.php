@@ -43,6 +43,4 @@
        <a href="#" class="btn btn-block btn-primary" onclick="goBack()"> Back</a>
         </div>
 </div>
-    {{-- </div>
-     </div> --}}
 @endsection
