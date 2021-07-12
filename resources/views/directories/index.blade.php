@@ -70,8 +70,8 @@
     $(document).ready(function () {
         $('#office').select2(); 
 
-        $(document).on('change', '#office', function(){
-            $('#directory_form').submit();
+        $(document).on('change','#office', function() {
+            window.location.href = "/show/"+$(this).val()
         })
     })
 </script>

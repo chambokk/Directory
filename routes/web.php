@@ -15,7 +15,7 @@ Route::get('/', 'OfficeController@index');
 Auth::routes();
 
 Route::get('/print', 'OfficeController@print');
-Route::post('/show', 'OfficeController@show');
+Route::get('/show/{id}', 'OfficeController@show');
 
 Route::get('directories/{id}', 'OfficeController@list');
 Route::post('directories/show', 'OfficeController@show');

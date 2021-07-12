@@ -26,9 +26,9 @@ class OfficeController extends Controller
     }
 
    
-    public function show(Request $request)
+    public function show(Request $request, $id)
     {
-        $directories = Directory::where('office_id', $request->office)->get();
+        $directories = Directory::where('office_id', $id)->get();
         return view('directories.show', compact('directories'));
     }
     public function print ()
