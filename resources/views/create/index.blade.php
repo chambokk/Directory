@@ -10,6 +10,13 @@
                 <div class="card-header">
                     <h2>Directories</h2>
 
+                    <div class="row">
+                        <div class="col-md-2 col-1">
+                        <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
                    
 {{-- 
                         <div class="col-md-12">
@@ -29,12 +36,7 @@
                                 </div> --}}
                                 
                            
-                        <div class="col-md-2 col-1">
-                        <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
-                        </div>
-                         </div>
-                
-            </div>
+                        
         {{-- </div> --}}
 
         <div class="card">
