@@ -19,7 +19,7 @@
     </div> --}}
 
     
-    <table class="table table-striped bg-secondary dt-responsive nowrap" id="table_directory">
+    <table class="table table-striped bg-light dt-responsive nowrap" id="table_directory">
         <thead> 
             <tr class="text-justify p-2"> 
                 <th>Contact Name</th>
