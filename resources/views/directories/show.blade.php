@@ -45,7 +45,7 @@
     </table>
 
         <div class="col-md-1 p-1">
-       <a href="#" class="btn btn-block btn-primary" onclick="goBack()"> Back</a>
+       <a href="#" class="btn btn-block" style="background-color:#211401; color:white" onclick="goBack()"> Back</a>
         </div>
 </div>
 @endsection

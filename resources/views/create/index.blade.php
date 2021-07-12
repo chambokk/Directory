@@ -1,5 +1,10 @@
 @extends('layouts.app2')
 
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
+@endsection
+
 @section('content')
 
 <div class="container">
@@ -40,7 +45,7 @@
         {{-- </div> --}}
 
         <div class="card">
-            <table class="table table-striped">
+            <table class="table table-striped" id="table_directory">
                 <thead>
                     <tr>
                         <th>Office Name</th>

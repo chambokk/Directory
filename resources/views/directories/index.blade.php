@@ -51,7 +51,7 @@
                             </div> --}}
                             
                             <div class="col-md-1 col-4 px-1">
-                                <a href="/print" class="btn btn-block btn-success floating-button"><i class="fa fa-print"></i> </a>
+                                <a href="/print" class="btn btn-block"  style="background-color:#211401; color:white"><i class="fa fa-print"></i> </a>
                             </div>
                         </div>
 

@@ -70,7 +70,7 @@
         </div>
             <div class="col-md-1 no-printme">
 
-                <a href="#" onclick="goBack()" class="btn btn-block btn-primary"> Back</a>
+                <a href="#" onclick="goBack()" class="btn btn-block" style="background: #211401; color:white"> Back</a>
             </div>
     </main>
    
