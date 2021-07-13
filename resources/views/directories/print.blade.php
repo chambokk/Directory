@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Directory</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -48,8 +48,8 @@
                         <th>Office</th>
                         <th>Name</th>
                         <th>Intercom</th>
+                        <th>Landline No</th>
                         <th>Email</th>
-                        {{-- <th>Email</th> --}}
 
                     </tr>
                 </thead>
@@ -60,7 +60,7 @@
                            <td>{{$directory->contact_name}}</td>
                            <td>{{$directory->directory_no}}</td>
                            <td>{{$directory->type}}</td>
-                           {{-- <td>{{$directory->email}}</td> --}}
+                           <td>{{$directory->email}}</td>
                            
                        </tr>
                    @endforeach
@@ -78,7 +78,7 @@
 
         function PrintElem(elem)
         {
-            var mywindow = window.open('', 'PRINT', 'height=400,width=600');
+            var mywindow = window.open('', 'PRINT', 'height=500,width=600');
 
             mywindow.document.write('<html><head><title>' + document.title  + '</title>');
             mywindow.document.write('</head><body >');

@@ -47,13 +47,32 @@ class AddofficeController extends Controller
         return $add;
     }
 
-    public function delete_office(Request $request)
-        {
-            $addoffice = Office::where ('id', $request->id)->first();
-            $addoffice->delete();
-            return $addoffice;
+    public function edit_office(Request $request)
+    {
+        return  Office::where ('id', $request->id)->first();
+    }
 
-        }
+    public function update_office(Request $request)
+    {
+        $request->validate([
+            'category_id'  =>  'required',
+        ]);
+
+        $request['office'] = $request->office_id;
+            $add = Office::findOrFail($request->id);
+            $add->update($request->all());
+            return $add;
+
+    }
+
+
+    // public function delete_office(Request $request)
+    //     {
+    //         $addoffice = Office::where ('id', $request->id)->first();
+    //         $addoffice->delete();
+    //         return $addoffice;
+
+    //     }
 
    
     /**
