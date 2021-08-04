@@ -17,7 +17,7 @@ class CreateDirectoriesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('office_id');
             $table->string('type');
-            $table->integer('directory_no');
+            $table->integer('directory_no'); 
             $table->string('contact_name');
             $table->string('email')->unique()->nullable()->after('contact_no');
             $table->string('contact_no')->after('contact_name')->nullable();

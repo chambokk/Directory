@@ -1,9 +1,6 @@
 @extends('layouts.app2')
 
-{{-- @section('styles')
-<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
-<link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
-@endsection --}}
+ 
 
 @section('content')
 
@@ -34,23 +31,20 @@
                         <th>Action</th>
                     </tr>
                 </thead>
-               @forelse ($office as $offices)
                 <tbody>
-                    
+                    @forelse ($office as $offices)
                     <tr>
                         <td>{{$offices->office}}</td> 
                         <td>{{$offices->category_id}}</td> 
                         <td><button data-id="{{$offices->id}}" class="btn btn-danger btn-sm edit"><i class="fas fa-edit"></i></button>
                             
-                    </tr>
-                        
+                    </tr>    
                     @empty
                     <td colspan="3">
                         no record found
                     </td>
-
+                    @endforelse
                 </tbody>
-                 @endforelse
             </table>
         {{$office->links()}} 
         </div>
@@ -75,7 +69,7 @@
             
                     <option value="" style=""> Select Category</option>
                     <option value="1">Provincial Capitol Office</option>
-                    <option value="2"> National Agencies</option>
+                    <option value="2">National Agencies</option>
                     <option value="3">Municipal LGU's</option>
                 </select>
 
@@ -126,10 +120,10 @@
 
 @section('scripts')
 
-{{-- <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script> --}}
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
 
 <script>
     $(function () {
@@ -139,13 +133,13 @@
 
   })
 
-//   $('#table_directory').dataTable({
-//             language: {
-//                 search: "Search Office:",
-//             },
-//             paging:false,
-//             info:false
-//         })
+  $('#table_directory').DataTable({
+        language: {
+            search: "Search Office:",
+        },
+        paging:false,
+        info:false
+    })
 
   $('.save').click(function() {
             $.post('{{ route("addoffice.store") }}', {

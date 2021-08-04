@@ -1,9 +1,9 @@
 @extends('layouts.app2')
 
-@section('styles')
+{{-- @section('styles')
 <link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
-@endsection
+@endsection --}}
 
 @section('content')
 
@@ -58,10 +58,8 @@
                     
                     </tr>
                 </thead>
-                 @forelse ($directory as $directories)
                 <tbody>
-                    
-                       
+                 @forelse ($directory as $directories)
                         <tr>
                             <td>{{$directories->office->office}}</td> 
                             <td>{{$directories->contact_name}}</td> 
@@ -78,8 +76,8 @@
                             no record found
                         </td>
                        
+                        @endforelse
                     </tbody>
-                @endforelse
                     
                    
             </table>
@@ -186,6 +184,13 @@
 @endsection
 
 @section('scripts')
+
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+
+
 <script>
  $(function () {
     $('.add').click(function(){
@@ -193,6 +198,14 @@
      })
 
   })
+
+  $('#table_directory').DataTable({
+        language: {
+            search: "Search Office:",
+        },
+        paging:false,
+        info:false
+    })
 
   $('.save').click(function() {
             $.post('{{ route("create.store") }}', {
