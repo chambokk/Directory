@@ -73,7 +73,7 @@
 <script>
       
     $(document).ready(function() {
-        $('#form_password').submit(function(e) {
+        $('#form_password').submit(function(e) { 
             e.preventDefault();
             var password = $('#pass').val();
             var password_confirm = $('#pass2').val();
@@ -82,10 +82,10 @@
                     alert(response.data);
                     $('#update_password').modal('hide');
                 })
-            } else {
+            } else { 
                 $('#error_message').removeClass('d-none')
             }
-        })
+        }) 
     })
 </script>
 

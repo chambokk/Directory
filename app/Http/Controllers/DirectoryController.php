@@ -124,11 +124,11 @@ class DirectoryController extends Controller
 
     public function update_password(Request $request) 
     {
-       
         $user = User::findOrFail(auth()->user()->id);
         $old = $request->password;
         $request['password'] = bcrypt($request->password);
         $user->update($request->all());
         return "Password successfully changed!";
+
     }
 }

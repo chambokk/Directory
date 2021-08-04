@@ -36,7 +36,7 @@ Route::post('addoffice/update_office', 'AddofficeController@update_office')->nam
 Route::middleware(['admin'])->group(function() {
 
     Route::resource('create', 'DirectoryController');
-    Route::post('update_password', 'DirectoryController@update_password');
+    Route::post('update_password', 'DirectoryController@update_password'); 
 });
 Route::post('create/edit_directory', 'DirectoryController@edit_directory');
 Route::post('create/delete_directory', 'DirectoryController@delete_directory')->name('delete_directory');
