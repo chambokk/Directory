@@ -40,11 +40,11 @@ class DirectoryController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'contact_name'  =>  'required',
-        //     'directory_no'  =>  'required',
+        $request->validate([
+            // 'contact_name'  =>  'required',
+            // 'directory_no'  =>  'required',
             
-        // ]);
+        ]);
         $add = Directory::create($request->all());
         return $add;
     }
