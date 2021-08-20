@@ -1,7 +1,5 @@
 @extends('layouts.app2')
 
- 
-
 @section('content')
 
 <div class="container">
@@ -46,7 +44,7 @@
                     @endforelse
                 </tbody>
             </table>
-        {{$office->links()}} 
+        {{-- {{$office->links()}}  --}}
         </div>
     </div>
 </div>
@@ -100,8 +98,8 @@
             
                     <option value="" style=""> Select Category</option>
                     <option value="1">Provincial Capitol Office</option>
-                    <option value="2">Municipal LGU's</option>
-                    <option value="3">National Agencies</option>
+                    <option value="2">National Agencies</option>
+                    <option value="3">Municipal LGU's</option>
                 </select>
 
                 <input type="hidden" name="ids" class="ids">
@@ -137,7 +135,7 @@
         language: {
             search: "Search Office:",
         },
-        paging:false,
+        // paging:false,
         info:false
     })
 

@@ -33,7 +33,7 @@
                
                 @else
                 <li class="nav-item active">
-                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="{{ url('create') }}">Create</a>
+                    <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="{{url('create') }}">Create</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link font-weight-bold" style="color: rgb(27, 55, 82);font-size:15px"  href="{{ url('addoffice') }}">Office</a>

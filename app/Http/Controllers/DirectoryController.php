@@ -17,7 +17,7 @@ class DirectoryController extends Controller
     public function index()
     {
         $office = Office::all();
-        $directory = Directory::with('office')->paginate(15);
+        $directory = Directory::with('office')->get();
         // dd($directory);
         return view ('create.index', compact('office', 'directory'));
     }

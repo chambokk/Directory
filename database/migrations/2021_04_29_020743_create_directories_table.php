@@ -19,7 +19,7 @@ class CreateDirectoriesTable extends Migration
             $table->string('type');
             $table->integer('directory_no'); 
             $table->string('contact_name');
-            $table->string('email')->unique()->nullable()->after('contact_no');
+            $table->string('email')->nullable()->after('contact_no');
             $table->string('contact_no')->after('contact_name')->nullable();
             $table->timestamps();
 

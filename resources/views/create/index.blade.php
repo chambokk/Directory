@@ -81,7 +81,7 @@
                     
                    
             </table>
-             {{$directory->links()}}
+             {{-- {{$directory->links()}} --}}
         </div>
 
         
@@ -203,7 +203,7 @@
         language: {
             search: "Search Office:",
         },
-        paging:false,
+        // paging:false,
         info:false
     })
 
