@@ -45,7 +45,8 @@ Route::post('create/edit_directory', 'DirectoryController@edit_directory');
 Route::post('create/delete_directory', 'DirectoryController@delete_directory')->name('delete_directory');
 Route::post('create/update_directory', 'DirectoryController@update_directory')->name('update_directory');
 
-
+//route for baranggay
+Route::resource('baranggay', 'BaranggayController');
 
 
 Route::get('/home', 'HomeController@index')->name('home');

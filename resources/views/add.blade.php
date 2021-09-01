@@ -26,6 +26,7 @@
             <option value="1">Provincial</option>
             <option value="2">Municipal</option>
             <option value="3">National Agency</option>
+            <option value="4">Municipal Elected Officials</option>
         </select>
 
 

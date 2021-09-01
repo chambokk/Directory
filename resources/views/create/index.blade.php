@@ -40,12 +40,12 @@
                                     <button type="submit" class="btn btn-block" style="background-color:#ffed4a"><i class="fa fa-search" aria-hidden="true"></i> </button>
                                 </div> --}}
                                 
-                           
+                            {{-- </div> --}}
                         
-        {{-- </div> --}}
+                          {{-- </div> --}}
 
         <div class="card">
-            <table class="table table-striped" id="table_directory">
+            <table class="table table-striped bg-light dt-responsive nowrap" id="table_directory">
                 <thead>
                     <tr>
                         <th>Office Name</th>
@@ -85,6 +85,7 @@
         </div>
 
         
+                    
         </div>
     </div>
 </div>

@@ -22,6 +22,10 @@
                 <div class="col-md-3 px-2">
                     <a href="/directories/3" class="btn btn-block floating-button; border border-dark; width:25 " style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">Municipal LGUs</a>
                 </div>
+
+                <div class="col-md-3 px-2">
+                    <a href="/directories/4" class="btn btn-block floating-button; border border-dark; width:25 " style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">Municipal Elected Officials</a>
+                </div>
             </div>
         </div>
     </div>

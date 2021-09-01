@@ -69,6 +69,7 @@
                     <option value="1">Provincial Capitol Office</option>
                     <option value="2">National Agencies</option>
                     <option value="3">Municipal LGU's</option>
+                    <option value="4">Municipal Elected Officials</option>
                 </select>
 
                 <div class="modal-footer">

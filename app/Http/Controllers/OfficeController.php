@@ -33,7 +33,7 @@ class OfficeController extends Controller
     }
     public function print ()
     {
-        // $directories = Directory::with('office')->orderBy('directory_no','asc')->get(); 
+        $directories = Directory::with('office')->orderBy('directory_no','asc')->get(); 
         $directories = DB::table('directories')
                             ->select('directories.*', 'offices.office')
                             ->join('offices','directories.office_id','offices.id')
@@ -42,6 +42,8 @@ class OfficeController extends Controller
         // dd($directories);
         return view('directories.print', compact('directories'));
     }
+
+    
    public function create()
    {
        $office = Office::orderBy('office', 'asc')->get();
