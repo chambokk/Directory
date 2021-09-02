@@ -1,9 +1,9 @@
 @extends('layouts.app2')
 
-{{-- @section('styles')
+@section('styles')
 <link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
-@endsection --}}
+@endsection
 
 @section('content')
 
@@ -187,10 +187,10 @@
 
 @section('scripts')
 
-{{-- <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script> --}}
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
 
 
 <script>

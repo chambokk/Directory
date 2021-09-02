@@ -1,5 +1,6 @@
 @extends('layouts.app2')
 
+
 @section('content')
 
 <div class="container">
@@ -14,11 +15,11 @@
                     <div class="col-md-2 col-1">
                     <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
                     </div>
+                    </div>
                 </div>
-                     </div>
             
-        </div>
-        {{-- </div> --}}
+            </div>
+        
 
         <div class="card">
             <div class="table-responsive">
@@ -47,6 +48,8 @@
             </table>
         {{-- {{$office->links()}}  --}}
             </div>
+        </div>
+        </div>
         </div>
     </div>
 </div>
@@ -120,11 +123,6 @@
 @endsection
 
 @section('scripts')
-
-{{-- <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script> --}}
 
 <script>
     $(function () {
@@ -206,10 +204,10 @@
          
 </script>
 
-<script>
+{{-- <script>
     $('#directory').change(function(e){
         console.log(e);
     })
-</script>
+</script> --}}
 @endsection
 

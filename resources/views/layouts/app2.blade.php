@@ -68,7 +68,7 @@
 <script src="{{ asset('js/notify.min.js') }}"></script>
 <script src="{{ asset('js/moment.js') }}"></script>
 <script src="{{ asset('js/swal.min.js') }}"></script>
-@yield('scripts')
+
 
 @yield('scripts')
 <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
@@ -78,6 +78,14 @@
 
 <script>
       
+    $('#table_directory').DataTable({
+        language: {
+            search: "Search Office:",
+        },
+        // paging:false,
+        info:false
+    })
+    
     $(document).ready(function() {
         $('#form_password').submit(function(e) { 
             e.preventDefault();
@@ -94,13 +102,6 @@
         }) 
     })
 
-    $('#table_directory').DataTable({
-        language: {
-            search: "Search Office:",
-        },
-        // paging:false,
-        info:false
-    })
 </script>
 
 </body>
