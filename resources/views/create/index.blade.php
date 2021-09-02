@@ -45,6 +45,7 @@
                           {{-- </div> --}}
 
         <div class="card">
+            <div class="table-responsive">
             <table class="table table-striped bg-light dt-responsive nowrap" id="table_directory">
                 <thead>
                     <tr>
@@ -85,7 +86,7 @@
         </div>
 
         
-                    
+        </div>    
         </div>
     </div>
 </div>
@@ -186,10 +187,10 @@
 
 @section('scripts')
 
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+{{-- <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script> --}}
 
 
 <script>
@@ -200,13 +201,13 @@
 
   })
 
-  $('#table_directory').DataTable({
-        language: {
-            search: "Search Office:",
-        },
-        // paging:false,
-        info:false
-    })
+//   $('#table_directory').DataTable({
+//         language: {
+//             search: "Search Office:",
+//         },
+//         // paging:false,
+//         info:false
+//     })
 
   $('.save').click(function() {
             $.post('{{ route("create.store") }}', {

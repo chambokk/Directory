@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-
+ 
     <h2 class="text-warning text-center p-2">Office Directory</h2> 
     
 <div class="row-py-5">
