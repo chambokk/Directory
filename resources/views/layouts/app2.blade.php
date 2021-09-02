@@ -20,21 +20,20 @@
         @yield('content')
     </main>
 
-    
-    
+
     <div class="modal fade" id="update_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <form action="" id="form_password">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">New Password</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        
-                        <div class="form-group row">        
+          <div class="modal-content">
+            <form action="" id="form_password">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">New Password</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                
+                    <div class="form-group row">        
                         <div class="col-10 d-none"  id="error_message">
                             <div class="alert alert-danger" role="alert">
                                 Password doesn't matched!
@@ -53,39 +52,29 @@
                             <input type="password" class="form-control" placeholder="" name="password_confirm" id="pass2"> 
                         </div>
                     </div>
-                    
+                
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
                 </div>
             </form>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/notify.min.js') }}"></script>
-<script src="{{ asset('js/moment.js') }}"></script>
-<script src="{{ asset('js/swal.min.js') }}"></script>
-
-
-@yield('scripts')
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
-
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/notify.min.js') }}"></script>
+    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ asset('js/swal.min.js') }}"></script>
+     @yield('scripts')
+ 
+     <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+     <script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
+     <script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
+     <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
 <script>
       
-    $('#table_directory').DataTable({
-        language: {
-            search: "Search Office:",
-        },
-        // paging:false,
-        info:false
-    })
-    
     $(document).ready(function() {
         $('#form_password').submit(function(e) { 
             e.preventDefault();
@@ -102,6 +91,13 @@
         }) 
     })
 
+    $('#table_directory').DataTable({
+        language: {
+            search: "Search Office:",
+        },
+        // paging:false,
+        info:false
+    })
 </script>
 
 </body>
