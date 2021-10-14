@@ -1,5 +1,11 @@
 @extends('layouts.app2')
 
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
+@endsection
+
 @section('content')
 
 <div class="container">
@@ -22,7 +28,7 @@
 
         <div class="card">
             <div class="table-responsive">
-            <table class="table table-striped dt-responsive nowrap" id="table_directory">
+            <table class="table table-striped dt-responsive" id="table_directory">
                 <thead>
                     <tr>
                         <th>Office</th>
@@ -68,10 +74,9 @@
                   <select class="form-control category_id" name="category_id">
             
                     <option value="" style=""> Select Category</option>
-                    <option value="1">Provincial Capitol Office</option>
-                    <option value="2">National Agencies</option>
-                    <option value="3">Municipal LGU's</option>
-                    <option value="4">Municipal Elected Officials</option>
+                    @foreach($categories as $category)
+                        <option value="{{$category->id}}">{{$category->category}}</option>
+                    @endforeach
                 </select>
 
                 <div class="modal-footer">
@@ -134,13 +139,9 @@
 
   })
 
-//   $('#table_directory').DataTable({
-//         language: {
-//             search: "Search Office:",
-//         },
-//         // paging:false,
-//         info:false
-//     })
+  $('#table_directory').DataTable({
+      responsive:true
+  })
 
   $('.save').click(function() {
             $.post('{{ route("addoffice.store") }}', {

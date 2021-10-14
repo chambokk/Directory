@@ -14,4 +14,9 @@ class Office extends Model
     {
         return $this->hasMany('App\Directory');
     }
+
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
 }

@@ -5,89 +5,63 @@
 <link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
 @endsection --}}
 
+@section('styles')
+<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
+@endsection
 @section('content')
 
 <div class="container">
     <div class="row justify-content-center">
-
-        <div class="col-md-12">
+        {{-- <div class="col-md-12"> --}}
             <div class="card">
                 <div class="card-header">
                     <h2>Directories</h2>
-
+            
                     <div class="row">
                         <div class="col-md-2 col-1">
                         <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
                         </div>
                     </div>
                 </div>
-            </div>
-                   
-{{-- 
-                        <div class="col-md-12">
-                            <div class="row  d-flex justify-content-center ">
-                                <div class="col-md-6 col-12 mb-2">
-                                    <select name="contact_name" class="form-control" id="contact_name">
-                                        <option value="" style=""> Select Office</option>
-                                        @foreach ($office as $itcdd)
-                                            <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
-                                        @endforeach 
-                                        
-                                    </select>
-                                </div>
+                
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped bg-light dt-responsive display" id="table_directory">
+                            <thead>
+                                <tr>
+                                    <th>Office Name</th>
+                                    <th>Contact Name</th>
+                                    <th>Intercom No.</th>
+                                    <th>Cellphone No.</th>
+                                    <th>Landline No.</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
                                 
-                                <div class="col-md-1 col-4 px-1">
-                                    <button type="submit" class="btn btn-block" style="background-color:#ffed4a"><i class="fa fa-search" aria-hidden="true"></i> </button>
-                                </div> --}}
-                                
-                            {{-- </div> --}}
-                        
-                          {{-- </div> --}}
-
-        <div class="card">
-            <div class="table-responsive">
-            <table class="table table-striped bg-light dt-responsive nowrap" id="table_directory">
-                <thead>
-                    <tr>
-                        <th>Office Name</th>
-                        <th>Contact Name</th>
-                        <th>Intercom No.</th>
-                        <th>Cellphone No.</th>
-                        <th>Landline No.</th>
-                        <th>Email</th>
-                        <th>Action</th>
-                    
-                    </tr>
-                </thead>
-                <tbody>
-                 @forelse ($directory as $directories)
-                        <tr>
-                            <td>{{$directories->office->office}}</td> 
-                            <td>{{$directories->contact_name}}</td> 
-                            <td>{{$directories->directory_no}}</td> 
-                            <td>{{$directories->contact_no}}</td> 
-                            <td>{{$directories->type}}</td>
-                            <td>{{$directories->email}}</td>  
-                            <td><button data-id="{{$directories->id}}" class="btn btn-primary btn-sm edit"> <i class="fas fa-edit"></i></button>
-                                <button data-id="{{$directories->id}}" class="btn btn-danger btn-sm delete"><i class="fas fa-trash"></i></button></td>        
-                        </tr>
-                            
-                        @empty
-                        <td colspan="6">
-                            no record found
-                        </td>
-                       
-                        @endforelse
-                    </tbody>
-                    
-                   
-            </table>
-             {{-- {{$directory->links()}} --}}
-        </div>
-
-        </div>
-        </div>           
-        </div>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($directory as $directories)
+                                    <tr>
+                                        <td>{{$directories->office->office}}</td> 
+                                        <td>{{$directories->contact_name}}</td> 
+                                        <td>{{$directories->directory_no}}</td> 
+                                        <td>{{$directories->contact_no}}</td> 
+                                        <td>{{$directories->type}}</td>
+                                        <td>{{$directories->email}}</td>  
+                                        <td><button data-id="{{$directories->id}}" class="btn btn-primary btn-sm edit"> <i class="fas fa-edit"></i></button>
+                                        <button data-id="{{$directories->id}}" class="btn btn-danger btn-sm delete"><i class="fas fa-trash"></i></button></td>        
+                                    </tr>
+                                @endforeach
+                            </tbody>    
+                        </table>
+                    </div>
+                {{-- {{$directory->links()}} --}}
+                </div>
+            </div>  
+        {{-- </div>     --}}
+    </div>
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -100,15 +74,13 @@
                   </button>
             </div>
             <div class="col-md-12">
-                <label class="font-weight-bold"> Office Name </label>
+               <label class="font-weight-bold"> Office Name </label>
                 <select class="form-control office_id" name="office_id">
                     {{-- <option disabled selected="true">choose office</option> --}}
                     <option value="" style=""> Select Office</option>
                     @foreach($office as $offices)
                     <option value="{{ $offices->id }}">{{ $offices->office }}</option>
                     @endforeach
-                </select>
-             
                 </select>
                 
                 <label class="font-weight-bold"> Contact Name </label>           
@@ -130,6 +102,7 @@
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary save">Save</button>
                   </div>
+            </div>
         </div>
     </div>
 </div>
@@ -154,7 +127,6 @@
                 @endforeach
             </select>
          
-            </select>
             
             <input type="hidden" class="form-control ids"  name="ids">   
 
@@ -200,13 +172,14 @@
 
   })
 
-//   $('#table_directory').DataTable({
-//         language: {
-//             search: "Search Office:",
-//         },
-//         // paging:false,
-//         info:false
-//     })
+  $('#table_directory').DataTable({
+        language: {
+            search: "Search Office:",
+        },
+        responsive:true,
+        // paging:false,
+        info:false
+    })
 
   $('.save').click(function() {
             $.post('{{ route("create.store") }}', {

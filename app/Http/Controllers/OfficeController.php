@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Directory;
 use App\Office;
+use App\Category;
 use DB;
 
 class OfficeController extends Controller
@@ -13,7 +14,8 @@ class OfficeController extends Controller
     {
         $directory = Directory::with('office')->get();
         $offices = Office::all(); 
-        return view('pages.welcome', compact('directory', 'offices'));
+        $categories = Category::all(); 
+        return view('pages.welcome', compact('directory', 'offices','categories'));
 
     }
 

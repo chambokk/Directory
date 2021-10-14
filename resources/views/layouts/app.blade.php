@@ -7,12 +7,13 @@
         <title>Directory</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <link href="{{asset('css/all.min.css')}}" rel="stylesheet">
         
     @yield('styles')
     </head>
+
+    
     <body style="background-color:#6e4904">
        <div class=''> @include('pages.nav')</div>
         <main class="container py-5">

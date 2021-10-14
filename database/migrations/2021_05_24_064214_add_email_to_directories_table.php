@@ -27,6 +27,7 @@ class AddEmailToDirectoriesTable extends Migration
     {
         Schema::table('directories', function (Blueprint $table) {
             $table->dropColumn('email');
+            $table->dropUnique('directories_email_unique');
         });
     }
 }

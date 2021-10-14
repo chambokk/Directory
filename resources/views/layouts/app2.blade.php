@@ -7,18 +7,21 @@
         <title>Directory</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="{{asset('css/app.css')}}" rel="stylesheet">
         <link href="{{asset('css/all.min.css')}}" rel="stylesheet">
         
     @yield('styles')
     </head>
+
+    
     <body style="background-color:#6e4904">
-        <div class=''> @include('pages.nav')</div>
+        @include('pages.nav')
         
         <main class="container py-5">
-        @yield('content')
-    </main>
+            @yield('content')
+        </main>
+
+        
 
 
     <div class="modal fade" id="update_password" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -65,14 +68,13 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/notify.min.js') }}"></script>
-    <script src="{{ asset('js/moment.js') }}"></script>
     <script src="{{ asset('js/swal.min.js') }}"></script>
-     @yield('scripts')
- 
-     <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
-     <script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
-     <script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-     <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+    {{-- <script src="{{ asset('js/moment.js') }}"></script> --}}
+    <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
+    <script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
+    @yield('scripts')
 <script>
       
     $(document).ready(function() {
@@ -91,13 +93,13 @@
         }) 
     })
 
-    $('#table_directory').DataTable({
-        language: {
-            search: "Search Office:",
-        },
-        // paging:false,
-        info:false
-    })
+    // $('#table_directory').DataTable({
+    //     language: {
+    //         search: "Search Office:",
+    //     },
+    //     // paging:false,
+    //     info:false
+    // })
 </script>
 
 </body>

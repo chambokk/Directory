@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Directory;
 use App\Office;
+use App\Category;
 use App\User;
 
 class DirectoryController extends Controller
@@ -18,8 +19,9 @@ class DirectoryController extends Controller
     {
         $office = Office::all();
         $directory = Directory::with('office')->get();
+        $category = Category::orderby('category')->get();
         // dd($directory);
-        return view ('create.index', compact('office', 'directory'));
+        return view ('create.index', compact('office', 'directory', 'category'));
     }
 
     /**

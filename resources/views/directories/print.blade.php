@@ -37,12 +37,12 @@
         }
     </style>
     </head>
-    <body style="background-color:#6e4904" onload="{window.print()}">
+    <body style="background-color:#6e4904" onload="PrintElem('printMe')">
     <main class="container ">
         <h2 class="text-warning text-center">Provincial Capitol of Davao de Oro Directory</h2> 
         
-        <div class="row d-flex left-content-jleft printme ex3"> 
-            <table class="table table-sm table-bordered bg-info table-primary"  >
+        <div class="row d-flex left-content-jleft printme ex3" > 
+            <table class="table table-sm table-bordered bg-info table-primary" id="printMe" >
                 <thead> 
                     <tr class="text-left">
                         <th>Office</th>

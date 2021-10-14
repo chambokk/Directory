@@ -18,6 +18,11 @@ class Directory extends Model
         return $this->belongsTo('App\Office');
     }
 
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
 }
 
 

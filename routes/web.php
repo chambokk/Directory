@@ -48,6 +48,8 @@ Route::post('create/update_directory', 'DirectoryController@update_directory')->
 //route for baranggay
 Route::resource('baranggay', 'BaranggayController');
 
+Route::post('get_category', 'CategoryController@index')->name('get_category');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();

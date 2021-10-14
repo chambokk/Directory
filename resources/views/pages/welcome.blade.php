@@ -10,22 +10,11 @@
             
         <div class="col-md-12"> 
             <div class="row d-flex justify-content-center">
-
-                <div class="col-md-3 px-2">
-                    <a href="/directories/1" class="btn btn-block floating-button; border border-dark; width:25"  style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">Provincial Capitol Offices</a>
-                </div>
-
-                <div class="col-md-3 px-2">
-                    <a href="/directories/2" class="btn btn-block floating-button; border border-dark; width:25" style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">National Agencies</a>
-                </div>
-
-                <div class="col-md-3 px-2">
-                    <a href="/directories/3" class="btn btn-block floating-button; border border-dark; width:25 " style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">Municipal LGUs</a>
-                </div>
-
-                <div class="col-md-3 px-2">
-                    <a href="/directories/4" class="btn btn-block floating-button; border border-dark; width:25 " style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">Municipal Elected Officials</a>
-                </div>
+                @foreach($categories as $category)
+                    <div class="col-md-4 mt-2 px-2">
+                        <a href="/directories/{{$category->id}}" class="btn btn-block"  style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">{{ $category->category }}</a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>

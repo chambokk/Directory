@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Office;
+use App\Category;
 
 
 class AddofficeController extends Controller
@@ -13,10 +14,11 @@ class AddofficeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $office = Office::orderBy('office','asc')->get();
-        return view('addoffice.index', compact('office'));
+        $categories = Category::orderby('category')->get();
+        return view('addoffice.index', compact('categories','office'));
     }
 
 
