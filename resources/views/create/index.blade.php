@@ -6,7 +6,7 @@
 @endsection --}}
 
 @section('styles')
-<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.min.css')}}">
+<link rel="stylesheet" href="{{ asset('css/dataTables/datatables.min.css')}}">
 <link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
 <link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
 @endsection
