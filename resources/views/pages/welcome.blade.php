@@ -10,7 +10,7 @@
             
         <div class="col-md-12"> 
             <div class="row d-flex justify-content-center">
-                @foreach($categories as $category)
+                @foreach($category as $category)
                     <div class="col-md-4 mt-2 px-2">
                         <a href="/directories/{{$category->id}}" class="btn btn-block"  style="background-color:#f7c865;font-size:18px;color:rgb(17, 17, 17)">{{ $category->category }}</a>
                     </div>

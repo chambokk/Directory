@@ -30,7 +30,7 @@
                     <div class="table-responsive">
                         <table class="table table-striped bg-light dt-responsive display" id="table_directory">
                             <thead>
-                                <tr>
+                                <tr> 
                                     <th>Office Name</th>
                                     <th>Contact Name</th>
                                     <th>Intercom No.</th>
@@ -74,6 +74,7 @@
                   </button>
             </div>
             <div class="col-md-12">
+
                <label class="font-weight-bold"> Office Name </label>
                 <select class="form-control office_id" name="office_id">
                     {{-- <option disabled selected="true">choose office</option> --}}
@@ -287,5 +288,7 @@ $.post('{{ route("update_directory")}}', {
             })
 
         })
+
+      
 </script>
 @endsection

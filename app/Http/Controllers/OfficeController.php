@@ -14,8 +14,8 @@ class OfficeController extends Controller
     {
         $directory = Directory::with('office')->get();
         $offices = Office::all(); 
-        $categories = Category::all(); 
-        return view('pages.welcome', compact('directory', 'offices','categories'));
+        $category = Category::get(); 
+        return view('pages.welcome', compact('directory', 'offices','category'));
 
     }
 
