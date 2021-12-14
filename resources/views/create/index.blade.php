@@ -31,6 +31,7 @@
                         <table class="table table-striped bg-light dt-responsive display" id="table_directory">
                             <thead>
                                 <tr> 
+                                    <th>Agency Name</th>
                                     <th>Office Name</th>
                                     <th>Contact Name</th>
                                     <th>Intercom No.</th>
@@ -44,6 +45,11 @@
                             <tbody>
                                 @foreach ($directory as $directories)
                                     <tr>
+                                        @if($directories->category != null)
+                                        <td>{{$directories->category->category}}</td>
+                                        @else
+                                        <td>No Category</td>
+                                        @endif 
                                         <td>{{$directories->office->office}}</td> 
                                         <td>{{$directories->contact_name}}</td> 
                                         <td>{{$directories->directory_no}}</td> 
@@ -74,6 +80,15 @@
                   </button>
             </div>
             <div class="col-md-12">
+
+                <label class="font-weight-bold"> Category </label>
+                <select class="form-control category_id" name="category_id">
+                    {{-- <option disabled selected="true">choose office</option> --}}
+                    <option value="" style=""> Select Category</option>
+                    @foreach($category as $categories)
+                    <option value="{{ $categories->id }}">{{ $categories->category }}</option>
+                    @endforeach
+                </select>
 
                <label class="font-weight-bold"> Office Name </label>
                 <select class="form-control office_id" name="office_id">
@@ -119,6 +134,16 @@
           </button>
         </div>
         <div class="col-md-12">
+
+            <label class="font-weight-bold"> Category </label>
+                <select class="form-control category_ids" name="category_id">
+                    {{-- <option disabled selected="true">choose office</option> --}}
+                    <option value="" style=""> Select Category</option>
+                    @foreach($category as $categories)
+                    <option value="{{ $categories->id }}">{{ $categories->category }}</option>
+                    @endforeach
+                </select>
+
             <label class="font-weight-bold"> Office Name </label>
             <select class="form-control office_ids" name="office_id">
                 {{-- <option disabled selected="true">choose office</option> --}}
@@ -185,6 +210,7 @@
   $('.save').click(function() {
             $.post('{{ route("create.store") }}', {
                         "_token": "{{ csrf_token() }}",
+                        category_id: $('.category_id').val(),
                         office_id: $('.office_id').val(),
                         contact_name: $('.contact_name').val(),
                         directory_no: $('.directory_no').val(),
@@ -218,6 +244,7 @@
             })
             .done(function (response) {
                 $('.ids').val(id)
+                $('.category_ids').val(response.category_id)
                 $('.office_ids').val(response.office_id)
                 $('.contact_names').val(response.contact_name)
                 $('.directory_nos').val(response.directory_no)
@@ -234,6 +261,7 @@
 $.post('{{ route("update_directory")}}', {
             "_token": "{{ csrf_token() }}",
             id: $('input[name=ids').val(),
+            category_id: $('.category_ids').val(),
             office_id: $('.office_ids').val(),
             contact_name: $('.contact_names').val(),
             directory_no: $('.directory_nos').val(),

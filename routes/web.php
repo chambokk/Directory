@@ -1,5 +1,5 @@
 <?php
-
+ 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +33,6 @@ Route::post('addoffice/update_office', 'AddofficeController@update_office')->nam
 // Route::post('addoffice/delete_office', 'AddofficeController@delete_office')->name('delete_office');
 
 
-
 // route for create new directory
 Route::middleware(['admin'])->group(function() {
 
@@ -54,4 +53,5 @@ Route::post('get_category', 'CategoryController@index')->name('get_category');
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('export', 'DirectoryController@export');

@@ -7,9 +7,16 @@ use App\Directory;
 use App\Office;
 use App\Category;
 use App\User;
+use App\Exports\DirectoryExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DirectoryController extends Controller
 {
+
+    public function export() 
+    {
+        return Excel::download(new DirectoryExport(1), 'directory.xlsx');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -18,7 +25,7 @@ class DirectoryController extends Controller
     public function index()
     {
         $office = Office::all();
-        $directory = Directory::with('office')->get();
+        $directory = Directory::with('office', 'category')->get();
         $category = Category::orderby('category')->get();
         // dd($directory);
         return view ('create.index', compact('office', 'directory', 'category'));
@@ -58,7 +65,7 @@ class DirectoryController extends Controller
     
         public function update_directory(Request $request)
         {
-           
+            
             $request->validate([
                 'office_id'  =>  'required',
                 'contact_name'  =>  'required',
