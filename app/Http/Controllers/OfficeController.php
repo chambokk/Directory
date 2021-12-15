@@ -24,7 +24,7 @@ class OfficeController extends Controller
     {
         // $directory = Directory::with('office')->get();
         $offices = Office::where('category_id', $id)->orderby('office','asc')->get(); 
-        return view('directories.index', compact('offices'));
+        return view('directories.index', compact('offices', 'id'));
     }
 
    

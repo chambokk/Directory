@@ -10,16 +10,28 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
+use  DB;
 
 class DirectoryExport implements FromCollection, WithMapping, WithHeadings, WithStyles, WithColumnWidths
 {
     /**
     * @return \Illuminate\Support\Collection
     */
+
+
+    public function __construct($request){
+        $this->category_id = $request->category_id;
+    }
+
+
     public function collection()
     {
-        
-        return Directory::all();
+        $category = $this->category_id;
+        $data = Directory::WhereHas('office', function ($q) use ($category) {
+            return $q->where('category_id',$category);
+        })->get();
+
+        return $data;
     }
     
     public function map($directory): array

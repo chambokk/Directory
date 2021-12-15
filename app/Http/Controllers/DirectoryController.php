@@ -13,9 +13,9 @@ use Maatwebsite\Excel\Facades\Excel;
 class DirectoryController extends Controller
 {
 
-    public function export() 
+    public function export(Request $request) 
     {
-        return Excel::download(new DirectoryExport(1), 'directory.xlsx');
+        return Excel::download(new DirectoryExport($request), 'directory.xlsx');
     }
     /**
      * Display a listing of the resource.
