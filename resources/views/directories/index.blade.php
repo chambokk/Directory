@@ -36,8 +36,9 @@
                     <div class="col-md-12">
                         <div class="row  d-flex justify-content-center ">
                             <div class="col-md-6 col-12 mb-2">
-                                <select name="office" class="form-control" id="office">
-                                    <option value="" style="">Select Office</option>
+                               
+                                <select name="office" class="form-control" id="office" >
+                                    <option value="" style="" disabled selected>Select Office</option>
                                     @foreach ($offices as $itcdd)
                                         <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
                                     @endforeach 
@@ -70,9 +71,14 @@
     $(document).ready(function () {
         $('#office').select2(); 
 
+        if ($('#office').val() != '') {
+            $('#office').val('');
+        }
+
         $(document).on('change','#office', function() {
             window.location.href = "/show/"+$(this).val()
         })
+
     })
 </script>
 @endsection

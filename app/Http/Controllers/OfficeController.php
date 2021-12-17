@@ -7,6 +7,7 @@ use App\Directory;
 use App\Office;
 use App\Category;
 use DB;
+use Illuminate\Support\Facades\Cookie;
 
 class OfficeController extends Controller
 {
@@ -56,17 +57,6 @@ class OfficeController extends Controller
     {
         $office = Directory::create($request->all());
         return redirect('/')->with('success','Successfully add');
-    }
-
-    public function add()
-    {
-        $offices = Office::orderBy('office', 'asc')->get();
-        return view('add',compact('offices'));
-    }
-    public function add1(Request $request)
-    {
-        $office = Office::create($request->all());
-        return redirect('create')->with('success','Successfully add');
     }
    
 }
