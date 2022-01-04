@@ -60,7 +60,7 @@ class DirectoryController extends Controller
 
     public function edit_directory(Request $request)
         {
-            return  Directory::where ('id', $request->id)->first();
+            return  Directory::where('id', $request->id)->first();
         }
     
         public function update_directory(Request $request)

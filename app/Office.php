@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Office extends Model
 {
     protected $fillable = [
-        'office','category_id' 
+        'id','office','category_id' 
     ];
 
     Public function directory()

@@ -153,8 +153,7 @@
                 @endforeach
             </select>
          
-            <input type="hidden" class="form-control ids"  name="ids">   
-
+            
             <label class="font-weight-bold"> Contact Name </label>           
             <input type="text" class="form-control contact_names" placeholder="name">   
             
@@ -163,9 +162,11 @@
             
             <label class="font-weight-bold"> Landline Number </label>
             <input type="text" class="form-control types" placeholder="type">
-
+            
             <label class="font-weight-bold"> Contact Number </label>
             <input type="text" class="form-control contact_nos" placeholder="contact">  
+            
+            <input type="hidden" class="form-control ids"  name="ids">   
 
             <label class="font-weight-bold"> Email </label>
             <input type="text" class="form-control emails" placeholder="email">  
