@@ -24,8 +24,9 @@
 @section('content')
 <div class="">
     <div class="col-md-12">
-        <div class="row d-flex justify-content-center ">
-
+        <div class="card" style="background-color: #8f8065; width: 50rem;">
+        <div class="row d-flex justify-content-center">
+            
             <h1 class="text-warning">Davao de Oro Directory</h1> 
         </div>
         <div class=" ">
@@ -59,6 +60,7 @@
                     </div>
                 </div>
             </form>
+        </div>
         </div>
     </div>
 </div>

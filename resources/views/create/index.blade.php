@@ -153,7 +153,6 @@
                 @endforeach
             </select>
          
-            
             <input type="hidden" class="form-control ids"  name="ids">   
 
             <label class="font-weight-bold"> Contact Name </label>           

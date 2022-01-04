@@ -40,7 +40,7 @@ Route::middleware(['admin'])->group(function() {
     Route::post('update_password', 'DirectoryController@update_password'); 
 });
 
-Route::post('create/edit_directory', 'DirectoryController@edit_directory');
+Route::post('create/edit_directory', 'DirectoryController@edit_directory')->name('edit_directory');
 Route::post('create/delete_directory', 'DirectoryController@delete_directory')->name('delete_directory');
 Route::post('create/update_directory', 'DirectoryController@update_directory')->name('update_directory');
 
