@@ -67,6 +67,7 @@ class DirectoryController extends Controller
         {
             
             $request->validate([
+                'category_id' => 'required',
                 'office_id'  =>  'required',
                 'contact_name'  =>  'required',
                 // 'directory_no'  =>  'required',
