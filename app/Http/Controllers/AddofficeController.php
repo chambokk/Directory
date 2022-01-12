@@ -14,6 +14,11 @@ class AddofficeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct() 
+     {
+         $this->middleware('auth');
+     }
     public function index(Request $request)
     {
         $office = Office::orderBy('office','asc')->get();

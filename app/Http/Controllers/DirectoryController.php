@@ -12,6 +12,10 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class DirectoryController extends Controller
 {
+    public function __construct() 
+    {
+        $this->middleware('auth');
+    }
 
     public function export(Request $request) 
     {
