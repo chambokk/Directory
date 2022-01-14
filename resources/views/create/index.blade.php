@@ -204,7 +204,8 @@
         },
         responsive:true,
         // paging:false,
-        info:false
+        info:false,
+        "bSort" : false
     })
 
   $('.save').click(function() {

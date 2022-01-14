@@ -11,10 +11,6 @@ use Illuminate\Support\Facades\Cookie;
 
 class OfficeController extends Controller
 {
-    public function __construct() 
-    {
-        $this->middleware('auth');
-    }
     public function index()
     {
         $directory = Directory::with('office')->get();

@@ -93,13 +93,6 @@
         }) 
     })
 
-    // $('#table_directory').DataTable({
-    //     language: {
-    //         search: "Search Office:",
-    //     },
-    //     // paging:false,
-    //     info:false
-    // })
 </script>
 
 </body>
