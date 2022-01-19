@@ -24,43 +24,39 @@
 @section('content')
 <div class="">
     <div class="col-md-12">
-        <div class="card" style="background-color: #8f8065; width: 50rem;">
-        <div class="row d-flex justify-content-center">
-            
-            <h1 class="text-warning">Davao de Oro Directory</h1> 
-        </div>
-        <div class=" ">
-            <form action="/show" method="POST" id="directory_form">
-                @csrf
-                <div class="row">
+        <div class="card" style="background-color: #8f8065; width:100%;">
+            <div class="row d-flex justify-content-center">
 
-                    <div class="col-md-12">
-                        <div class="row  d-flex justify-content-center ">
-                            <div class="col-md-6 col-12 mb-2">
-                               
-                                <select name="office" class="form-control" id="office" >
-                                    <option value="" style="" disabled selected>Select Office</option>
-                                    @foreach ($offices as $itcdd)
-                                        <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
-                                    @endforeach 
+                <h1 class="text-warning">Davao de Oro Directory</h1> 
+            </div>
+                <div class=" ">
+                    <form action="/show" method="POST" id="directory_form">
+                        @csrf
+                        <div class="row">
+
+                            <div class="col-md-12">
+                                <div class="row  d-flex justify-content-center ">
+                                    <div class="col-md-6 col-12 mb-2">
                                     
-                                </select>
-                            </div>
+                                        <select name="office" class="form-control" id="office" >
+                                            <option value="" style="" disabled selected>Select Office</option>
+                                            @foreach ($offices as $itcdd)
+                                                <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
+                                            @endforeach 
+                                            
+                                        </select>
+                                    </div>
 
-                          
-                            {{-- <div class="col-md-1 col-4 px-1">
-                                <button type="submit" class="btn btn-block" style="background-color:#ffed4a"><i class="fa fa-search" aria-hidden="true"></i> </button>
-                            </div> --}}
-                            
-                            <div class="col-md-1 col-4 px-1">
-                                <a href="/export?category_id={{$id}}" class="btn btn-block"  style="background-color:#211401; color:white"><i class="fa fa-print"></i> </a>
+                                    <div class="col-md-1 col-4 px-1">
+                                        <a href="/export?category_id={{$id}}" class="btn btn-block"  style="background-color:#211401; color:white">
+                                            <i class="fa fa-print"></i> </a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-                    </div>
+                    </form>
                 </div>
-            </form>
-        </div>
         </div>
     </div>
 </div>

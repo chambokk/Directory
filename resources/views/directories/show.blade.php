@@ -10,14 +10,6 @@
     <h2 class="text-warning text-center p-2">Office Directory</h2> 
     
 <div class="row-py-5">
-    {{-- <div class="card"> --}}
-        
-        {{-- <div class="card-body bg-primary"> --}}
-        
-    {{-- <div class="col-md-2 p-2">
-        <a href="create" class="btn btn-block btn-success"> <i class="fa fa-plus" aria-hidden="true"></i> Add Directory</a>
-    </div> --}}
-
     
     <table class="table table-striped bg-light dt-responsive nowrap" id="table_directory">
         <thead> 
@@ -45,7 +37,7 @@
     </table>
 
         <div class="col-md-1 p-1">
-       <a href="#" class="btn btn-block" style="background-color:#211401; color:white" onclick="goBack()"> Back</a>
+            <a href="#" class="btn btn-block" style="background-color:#211401; color:white" onclick="goBack()"> Back</a>
         </div>
 </div>
 @endsection
@@ -62,7 +54,8 @@
         $('#table_directory').dataTable({
             searching:false,
             paging:false,
-            info:false
+            info:false,
+            "bSort" : false
         })
     })
 

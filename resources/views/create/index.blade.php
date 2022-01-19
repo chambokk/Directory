@@ -1,10 +1,5 @@
 @extends('layouts.app2')
 
-{{-- @section('styles')
-<link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
-<link rel="stylesheet" href="{{ asset('css/dataTables/responsive.bootstrap4.min.css')}}">
-@endsection --}}
-
 @section('styles')
 <link rel="stylesheet" href="{{ asset('css/dataTables/datatables.min.css')}}">
 <link rel="stylesheet" href="{{ asset('css/dataTables/dataTables.bootstrap4.min.css')}}">
@@ -21,8 +16,7 @@
             
                     <div class="row">
                         <div class="col-md-2 col-1">
-                        <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button>
-                        </div>
+                        <button type="button" class="btn btn-primary add"> <i class="fas fa-plus"></i> Add</button></div>
                     </div>
                 </div>
                 
@@ -183,12 +177,6 @@
 @endsection
 
 @section('scripts')
-
-{{-- <script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script>
-<script src="{{asset('js/dataTables/dataTables.bootstrap4.min.js')}}"></script>
-<script src="{{asset('js/dataTables/dataTables.responsive.min.js')}}"></script>
-<script src="{{asset('js/dataTables/jquery.dataTables.min.js')}}"></script> --}}
-
 
 <script>
  $(function () {
