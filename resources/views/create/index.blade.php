@@ -64,7 +64,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade modal-auto-clear" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -191,7 +191,7 @@
             search: "Search Office:",
         },
         responsive:true,
-        // paging:false,
+        paging:true,
         info:false,
         "bSort" : false
     })
@@ -220,7 +220,6 @@
                         $.notify(errors[0], "error");
                 });
         })
-
 
         $(document).on('click', '.edit', function() {
             var id = $(this).data('id')

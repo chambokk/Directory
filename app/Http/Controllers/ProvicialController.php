@@ -15,7 +15,6 @@ class ProvicialController extends Controller
         $directory = Directory::with('office')->get();
         $offices = Office::all(); 
         return view('directories.index', compact('directory', 'offices'));
-
     }
 
     public function show(Request $request)

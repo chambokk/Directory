@@ -10,7 +10,6 @@
     <h2 class="text-warning text-center p-2">Office Directory</h2> 
     
 <div class="row-py-5">
-    
     <table class="table table-striped bg-light dt-responsive nowrap" id="table_directory">
         <thead> 
             <tr class="text-justify p-2"> 

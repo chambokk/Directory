@@ -7,10 +7,9 @@ use App\Directory;
 use App\Office;
 class WelcomeController extends Controller
 {
-    public function index(){
-
+    public function index()
+    {
         $directory = Directory::with('office')->get();
-        return view('Welcome', compact('directory'));
-        
+        return view('Welcome', compact('directory'));  
     }
 }

@@ -7,19 +7,12 @@ use App\Directory;
 use App\Office;
 use App\Category;
 use App\User;
-use App\Exports\DirectoryExport;
-use Maatwebsite\Excel\Facades\Excel;
 
 class DirectoryController extends Controller
 {
     public function __construct() 
     {
         $this->middleware('auth');
-    }
-
-    public function export(Request $request) 
-    {
-        return Excel::download(new DirectoryExport($request), 'directory.xlsx');
     }
     /**
      * Display a listing of the resource.

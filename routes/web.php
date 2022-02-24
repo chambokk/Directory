@@ -32,7 +32,6 @@ Route::post('addoffice/edit_office', 'AddofficeController@edit_office')->name('e
 Route::post('addoffice/update_office', 'AddofficeController@update_office')->name('update_office');
 // Route::post('addoffice/delete_office', 'AddofficeController@delete_office')->name('delete_office');
 
-
 // route for create new directory
 Route::middleware(['admin'])->group(function() {
 
@@ -49,9 +48,7 @@ Route::resource('baranggay', 'BaranggayController');
 
 Route::post('get_category', 'CategoryController@index')->name('get_category');
 
-
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
-
-Route::get('export', 'DirectoryController@export');
+Route::get('export', 'OfficeController@export');

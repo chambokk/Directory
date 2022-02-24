@@ -15,7 +15,7 @@ class AddofficeController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function __construct() 
+     public function __construct()
      {
          $this->middleware('auth');
      }
@@ -25,8 +25,6 @@ class AddofficeController extends Controller
         $categories = Category::orderby('category')->get();
         return view('addoffice.index', compact('categories','office'));
     }
-
-
 
     /**
      * Show the form for creating a new resource.
@@ -72,16 +70,6 @@ class AddofficeController extends Controller
 
     }
 
-
-    // public function delete_office(Request $request)
-    //     {
-    //         $addoffice = Office::where ('id', $request->id)->first();
-    //         $addoffice->delete();
-    //         return $addoffice;
-
-    //     }
-
-   
     /**
      * Display the specified resource.
      *

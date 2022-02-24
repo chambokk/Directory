@@ -8,16 +8,21 @@ use App\Office;
 use App\Category;
 use DB;
 use Illuminate\Support\Facades\Cookie;
+use App\Exports\DirectoryExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class OfficeController extends Controller
 {
+    public function export(Request $request) 
+    {
+        return Excel::download(new DirectoryExport($request), 'directory.xlsx');
+    }
     public function index()
     {
         $directory = Directory::with('office')->get();
         $offices = Office::all(); 
         $category = Category::get(); 
         return view('pages.welcome', compact('directory', 'offices','category'));
-
     }
 
     // get all filtered directories
@@ -28,7 +33,6 @@ class OfficeController extends Controller
         return view('directories.index', compact('offices', 'id'));
     }
 
-   
     public function show(Request $request, $id)
     {
         $directories = Directory::where('office_id', $id)->get();
