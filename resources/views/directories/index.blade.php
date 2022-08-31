@@ -42,8 +42,7 @@
                                             <option value="" style="" disabled selected>Select Office</option>
                                             @foreach ($offices as $itcdd)
                                                 <option value="{{$itcdd->id}}">{{$itcdd->office}}</option>                                        
-                                            @endforeach 
-                                            
+                                            @endforeach            
                                         </select>
                                     </div>
 

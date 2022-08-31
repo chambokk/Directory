@@ -15,8 +15,8 @@
             <tr class="text-justify p-2"> 
                 <th>Contact Name</th>
                 <th>Intercom</th>
-                <th>Landline No</th>
                 <th>Cellphone No</th>
+                <th>Landline No</th>
                 <th>Email</th>
             </tr>
         </thead>
