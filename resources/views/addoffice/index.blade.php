@@ -41,7 +41,7 @@
                     <tr>
                         <td>{{$offices->office}}</td> 
                         <td>{{$offices->category_id}}</td> 
-                        <td><button data-id="{{$offices->id}}" class="btn btn-danger btn-sm edit"><i class="fas fa-edit"></i></button>
+                        <td><button data-id="{{$offices->id}}" class="btn btn-danger btn-sm edit"><i class="fas fa-edit"></i></button></td>
                             
                     </tr>    
                     @empty
