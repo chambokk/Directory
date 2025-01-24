@@ -42,11 +42,13 @@ class OfficeController extends Controller
     {
         $directories = Directory::with('office')->orderBy('directory_no','asc')->get(); 
         $directories = DB::table('directories')
-                            ->select('directories.*', 'offices.office')
-                            ->join('offices','directories.office_id','offices.id')
+                            ->leftJoin('offices','directories.office_id','offices.id')
+                            ->selectRaw('directories.*
+                                    ,offices.office
+                                ')
                             ->orderby('offices.office', 'asc')
                             ->get();
-        // dd($directories);
+
         return view('directories.print', compact('directories'));
     }
 

@@ -36,18 +36,24 @@ class DirectoryExport implements FromCollection, WithMapping, WithHeadings, With
     
     public function map($directory): array
     {
+        $office = json_decode($directory->office, true)['office'] ?? $directory->office;
         return [
             $directory->directory_no,
+            $office,
             $directory->contact_name,
             $directory->type,
+            $directory->email
         ];
     }
+
     public function headings(): array
     {
         return[
             'Directory No',
+            'Office Name',
             'Contact Name',
             'Type',
+            'Email'
         ];
     }
 

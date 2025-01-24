@@ -45,7 +45,7 @@
             <table class="table table-sm table-bordered bg-info table-primary" id="printMe" >
                 <thead> 
                     <tr class="text-left">
-                        <th>Office</th>
+                       
                         <th>Name</th>
                         <th>Intercom</th>
                         <th>Landline No</th>
@@ -56,7 +56,7 @@
                 <tbody>
                    @foreach ($directories as $directory)
                        <tr class="text-left">
-                           <td>{{$directory->office}}</td>
+                          
                            <td>{{$directory->contact_name}}</td>
                            <td>{{$directory->directory_no}}</td>
                            <td>{{$directory->type}}</td>
